@@ -12,10 +12,10 @@ salary_comparison <- aggregate(grad_jobs$Estimated.Salary, by = list(grad_jobs$P
 colnames(salary_comparison) <- c("Programme", "Estimated_Salary")
 
 #remove everything except IT, ACCOUNTING, MARKETING
-select_programmes <- subset(salary_comparison, Programme %in% c("IT", "ACCOUNTING", "MARKETING"))
+select_programmes <- subset(salary_comparison, Programme %in% c("INFORMATION TECHNOLOGY", "ACCOUNTING", "MARKETING"))
 
 # sort by Estimated salary
-salary_comparison <- salary_comparison[order(salary_comparison$Estimated_Salary), ]
+salary_programmes <- salary_programmes[order(salary_programmes$Estimated_Salary), ]
 
 # to retain the order in the plot
 select_programmes$Programme <- factor(select_programmes$Programme, levels = select_programmes$Programme)
