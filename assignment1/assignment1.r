@@ -1,3 +1,4 @@
+#I GUSTI BAGUS MILO PADMA WIJAYA #E2000425
 #use ggplot2 library
 library(ggplot2)
 
@@ -12,7 +13,7 @@ salary_comparison <- aggregate(grad_jobs$Estimated.Salary, by = list(grad_jobs$P
 colnames(salary_comparison) <- c("Programme", "Estimated_Salary")
 
 #remove everything except IT, ACCOUNTING, MARKETING
-select_programmes <- subset(salary_comparison, Programme %in% c("INFORMATION TECHNOLOGY", "ACCOUNTING", "MARKETING"))
+select_programmes <- subset(salary_comparison, Programme %in% c("INFORMATION TECHNOLOGY", "MARKETING", "ACCOUNTING"))
 
 # sort by Estimated salary
 salary_programmes <- salary_programmes[order(salary_programmes$Estimated_Salary), ]
